@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block main %}
+{{ super() }}
+<form action="/index" method="post">
+  <fieldset>
+    <legend><font face = "Times New Roman"> Запись на прием ко врачу </font></legend>
+    <div class="form-control">
+        <label for="name"><font face = "Times New Roman"> ФИО</font></label>
+      <input type="name" id ="username" name="username" placeholder="" required />
+    </div>
+
+    <div class="form-control">
+      <label for="number"><font face = "Times New Roman"> Номер телефона </font></label>
+      <input
+        type="number"117989
+        id ="number"
+        name = "number"
+        placeholder=""
+        required
+      />
+    </div>
+     <div class="form-control">
+      <label for="date"><font face = "Times New Roman"> Дата рождения </font></label>
+      <input
+        type="date"
+        id ="date"
+        name="date"
+        placeholder=""
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1"><font face = "Times New Roman"> Услуги </font></label>
+        <select class="form-control" id ="exampleFormControlSelect1" name="exampleFormControlSelect1">
+          <option>УЗИ</option>
+          <option>МРТ</option>
+          <option>ПРИЕМ ВРАЧЕЙ СПЕЦИАЛИСТОВ</option>
+
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect2"><font face = "Times New Roman"> Врачи </font></label>
+        <select class="form-control" id ="exampleFormControlSelect2" name="exampleFormControlSelect2">
+          <option>...</option>
+          <option>Яшин Константин Сергеевич</option>
+          <option>Лазарь Андрей Даниилович</option>
+          <option>Шилова Александра Викторовна</option>
+          <option>Смирнова Мария Владимировна</option>
+          <option>Волков Артем Александрович</option>
+          <option>Клюева Ирина Геннадьевна</option>
+          <option>Малышева Екатерина Сергеевна</option>
+          <option>Селезнева Светлана Владимировна</option>
+          <option>Дюдина Ксения Алексеевна</option>
+
+        </select>
+    </div>
+    <form>
+      <p>
+        <label for="date"><font face = "Times New Roman"> Дата приема: </font> </label>
+        <input type="date" id ="date1" name="date1"/>
+      </p>
+      <p>
+        <label for="date"><font face = "Times New Roman"> Время приема: </font></label>
+        <input type="time" id ="time" name="time"/>
+      </p>
+    </form>
+    <input type="submit" value="Отправить" class="submit-btn" />
+  </fieldset>
+</form>
+{% endblock %}
